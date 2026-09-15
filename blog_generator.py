@@ -16,8 +16,10 @@ def generate_blog(paragraph_topic):
   retrieve_blog = response.choices[0].text
   return retrieve_blog
 
+print(generate_blog('Why NYC is better than your city.'))
+
 keep_writing = True
-print(repr(config["API_KEY"]))
+
 while keep_writing:
   answer = input('Write a paragraph? Y for yes, anything else for no. ')
   if (answer == 'Y'):
@@ -25,5 +27,3 @@ while keep_writing:
     print(generate_blog(paragraph_topic))
   else:
     keep_writing = False
-
-print(generate_blog('Why NYC is better than your city.'))
